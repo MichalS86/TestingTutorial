@@ -1,0 +1,27 @@
+# Application Info
+info:
+  name: TestingTutorial
+  description: TestingTutorial description
+  version: 1.0-SNAPSHOT
+
+server:
+  port: 8080
+  context-path: /TestingTutorial
+#
+#spring:
+#  datasource:
+#    maxActive: 300
+#    url: jdbc:postgresql://localhost:5432/tutorialdb
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+#    schema: public
+#
+#endpoints:
+#  enabled: false
+#  sensitive: true
+#  configprops.enabled: true
+#  info.enabled: true
+#  health.enabled: true
+#  metrics.enabled: true
+#

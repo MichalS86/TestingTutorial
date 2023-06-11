@@ -1,0 +1,1 @@
+docker run --name tutorialdb -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v //$(pwd)/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d -d postgres
