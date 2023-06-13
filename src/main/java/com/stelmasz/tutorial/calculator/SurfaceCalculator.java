@@ -10,4 +10,8 @@ public class SurfaceCalculator {
         float walls = 2 * room.getWidth() * room.getHeight() + 2 * room.getLength() * room.getHeight();
         return new Surface(walls, ceiling);
     }
+
+    public Surface countTriangularPrismSurface(Room room){
+        return new Surface(3, 0.5f);
+    }
 }

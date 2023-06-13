@@ -1,6 +1,7 @@
 package com.stelmasz.tutorial.calculator;
 
 import com.stelmasz.tutorial.model.Room;
+import com.stelmasz.tutorial.model.Surface;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,9 +17,10 @@ public class SurfaceCalculatorTest {
         Room room = new Room(1,1,1);
 
         //when
-        float surface = calculator.countTriangularPrismSurface();
+        Surface surface = calculator.countTriangularPrismSurface(room);
 
         //then
-        assertEquals(surface, 3.5);
+        assertEquals(surface.getWallsSurface(), 3);
+        assertEquals(surface.getCeilingSurface(), 0.5);
     }
 }

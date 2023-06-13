@@ -1,6 +1,6 @@
 package com.stelmasz.tutorial;
 
-import com.stelmasz.tutorial.calculator.Calculator;
+import com.stelmasz.tutorial.calculator.CostCalculator;
 import com.stelmasz.tutorial.dao.DbPaintingDao;
 import com.stelmasz.tutorial.dao.PaintingDao;
 import com.stelmasz.tutorial.model.Painting;
@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculatorController {
 
     PaintingDao paintingDao = new DbPaintingDao(Conf.createDataSource());
-    Calculator calculator = new Calculator(paintingDao);
+    CostCalculator costCalculator = new CostCalculator(paintingDao);
 
 
     @PostMapping(value = "/count", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public float countPaintingCost(@RequestBody Request request) {
-        return calculator.countRoomCost(request.getRoom(), request.getPaintingId());
+        return costCalculator.countRoomCost(request.getRoom(), request.getPaintingId());
     }
 
     @PostMapping(value = "/painting", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

@@ -6,12 +6,12 @@ import com.stelmasz.tutorial.model.Room;
 import com.stelmasz.tutorial.model.Surface;
 
 
-public class Calculator {
+public class CostCalculator {
 
     private PaintingDao paintingDao;
-    private SurfaceCalculator calculator;
+    private SurfaceCalculator calculator = new SurfaceCalculator();
 
-    public Calculator(PaintingDao paintingDao) {
+    public CostCalculator(PaintingDao paintingDao) {
         this.paintingDao = paintingDao;
     }
 

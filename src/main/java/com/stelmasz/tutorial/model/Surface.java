@@ -6,10 +6,11 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Surface {
-    private float walls;
-    private float ceiling;
+    private float wallsSurface;
+    private float ceilingSurface;
+
 
     public float getSurface(){
-        return walls + ceiling;
+        return wallsSurface + ceilingSurface;
     }
 }
