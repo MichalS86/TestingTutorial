@@ -11,9 +11,10 @@ public class FakePaintingDao implements PaintingDao {
     private static Map<Integer, Painting> paintingsDb = new HashMap<>();
 
     static {
-        paintingsDb.put(1, new Painting(1, "test", 5, 10));
-        paintingsDb.put(2, new Painting(2, "test", -5, 20));
-        paintingsDb.put(3, new Painting(3, "test", 15, -8));
+        paintingsDb.put(1, new Painting(1, "test1", 5, 10));
+        paintingsDb.put(2, new Painting(2, "test2", 10, 15));
+        paintingsDb.put(3, new Painting(3, "test3", -5, 10));
+        paintingsDb.put(4, new Painting(4, "test4", 10, -5));
     }
 
     @Override
